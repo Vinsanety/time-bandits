@@ -11,7 +11,7 @@ export default function NavHeader() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
         {/* Logo */}
         <div className="text-2xl font-bold tracking-tight">
-          <Link href="/">ATP</Link>
+          <Link href="/">All Time Performances</Link>
         </div>
 
         {/* Desktop Nav */}
@@ -19,8 +19,8 @@ export default function NavHeader() {
           <Link href="/" className="hover:text-amber-400">
             Home
           </Link>
-          <Link href="/lists" className="hover:text-amber-400">
-            Top 10s
+          <Link href="/routes" className="hover:text-amber-400">
+            Routes
           </Link>
           <Link href="/blog" className="hover:text-amber-400">
             Blog
@@ -59,14 +59,26 @@ export default function NavHeader() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <nav className="md:hidden bg-green-800 px-4 pb-4 space-y-2">
-          <Link href="/" className="block hover:text-amber-400">
+        <nav className="md:hidden bg-green-800 px-4 p-4 space-y-4">
+          <Link
+            href="/"
+            className="block hover:text-amber-400"
+            onClick={() => setIsOpen(false)}
+          >
             Home
           </Link>
-          <Link href="/lists" className="block hover:text-amber-400">
-            Top 10s
+          <Link
+            href="/routes"
+            className="block hover:text-amber-400"
+            onClick={() => setIsOpen(false)}
+          >
+            Routes
           </Link>
-          <Link href="/blog" className="block hover:text-amber-400">
+          <Link
+            href="/blog"
+            className="block hover:text-amber-400"
+            onClick={() => setIsOpen(false)}
+          >
             Blog
           </Link>
         </nav>

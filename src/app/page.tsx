@@ -1,10 +1,9 @@
 export default function Page() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative h-[80vh] bg-[url('https://ralphdeal.s3.amazonaws.com/wp-content/uploads/2024/03/Grand_Teton_revised_blog-32.jpg')] bg-cover bg-center flex items-center justify-center ">
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent"></div>
-        {/* Hero Content */}
+      <section className="relative h-[80vh] bg-[url('/images/ATP-bg.png')] bg-cover bg-center flex items-center justify-center">
+        <div className="absolute inset-0 bg-white/15 mix-blend-lighten"></div>
+
         <div className="relative z-10 text-center text-white px-4">
           <h1 className="text-5xl font-bold tracking-wide drop-shadow-lg">
             All Time Performances
@@ -14,7 +13,6 @@ export default function Page() {
             built for performance.
           </p>
 
-          {/* CTA Button */}
           <button className="mt-8 px-6 py-3 bg-green-700 hover:bg-green-800 rounded-lg font-semibold shadow-lg transition">
             Discover Routes
           </button>
