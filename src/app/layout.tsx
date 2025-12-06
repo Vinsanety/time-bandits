@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import NavHeader from "@/components/NavHeader";
+import HeaderNav from "@/components/HeaderNav";
 
 export const metadata: Metadata = {
   title: "Time Bandits",
@@ -16,7 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <header>
-          <NavHeader />
+          <HeaderNav />
         </header>
         <main className="py-16">{children}</main>
       </body>

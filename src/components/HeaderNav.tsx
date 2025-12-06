@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { NavLink } from "@/components/NavLink";
 
-export default function NavHeader() {
+export default function HeaderNav() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -16,15 +17,9 @@ export default function NavHeader() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-8 font-medium">
-          <Link href="/" className="hover:text-amber-400">
-            Home
-          </Link>
-          <Link href="/routes" className="hover:text-amber-400">
-            Routes
-          </Link>
-          <Link href="/blog" className="hover:text-amber-400">
-            Blog
-          </Link>
+          <NavLink href="/">Home</NavLink>
+          <NavLink href="/routes">Routes</NavLink>
+          <NavLink href="/media">Media</NavLink>
         </nav>
 
         {/* Mobile Hamburger */}
@@ -60,27 +55,15 @@ export default function NavHeader() {
       {/* Mobile Menu */}
       {isOpen && (
         <nav className="md:hidden bg-gray-200 px-4 p-4 space-y-4">
-          <Link
-            href="/"
-            className="block hover:text-amber-400"
-            onClick={() => setIsOpen(false)}
-          >
+          <NavLink href="/" onClick={() => setIsOpen(false)}>
             Home
-          </Link>
-          <Link
-            href="/routes"
-            className="block hover:text-amber-400"
-            onClick={() => setIsOpen(false)}
-          >
+          </NavLink>
+          <NavLink href="/routes" onClick={() => setIsOpen(false)}>
             Routes
-          </Link>
-          <Link
-            href="/blog"
-            className="block hover:text-amber-400"
-            onClick={() => setIsOpen(false)}
-          >
-            Blog
-          </Link>
+          </NavLink>
+          <NavLink href="/media" onClick={() => setIsOpen(false)}>
+            Media
+          </NavLink>
         </nav>
       )}
     </header>
