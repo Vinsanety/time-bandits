@@ -12,7 +12,7 @@ export default function HeaderNav() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
         {/* Logo */}
         <div className="text-2xl font-bold tracking-tight">
-          <Link href="/">All Time Performances</Link>
+          <Link href="/">All Time Performance</Link>
         </div>
 
         {/* Desktop Nav */}

@@ -1,3 +1,3 @@
 export default function Page() {
-  return <h1>Media route</h1>;
+  return <h1>Media</h1>;
 }

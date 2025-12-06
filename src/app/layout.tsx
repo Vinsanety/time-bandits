@@ -4,7 +4,7 @@ import HeaderNav from "@/components/HeaderNav";
 
 export const metadata: Metadata = {
   title: "Time Bandits",
-  description: "All Time Performances",
+  description: "All Time Performance",
 };
 
 export default function RootLayout({

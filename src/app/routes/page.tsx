@@ -12,7 +12,7 @@ export default function ListsPage() {
 
       {/* Intro tagline */}
       <p className="mt-6 text-xl max-w-2xl mx-auto drop-shadow-md text-center text-gray-700">
-        Top 10 routes <em>All Time Performances</em> by category
+        Top 10 routes <em>All Time Performance</em> by category
       </p>
 
       {/* Category Grid */}

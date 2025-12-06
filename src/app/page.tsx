@@ -8,7 +8,7 @@ export default function Page() {
         <div className="absolute inset-0 bg-white/5 mix-blend-lighten"></div>
         <div className="relative z-10 text-center text-white px-4">
           <h1 className="text-5xl font-bold tracking-wide drop-shadow-lg">
-            All Time Performances
+            All Time Performance
           </h1>
           <p className="mt-6 text-xl max-w-2xl mx-auto drop-shadow-md">
             Verified attempts. Rugged routes. Transparent scoring. A community
