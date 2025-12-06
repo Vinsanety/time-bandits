@@ -1,9 +1,11 @@
+import { Button } from "@/components/Button";
+import Link from "next/link";
+
 export default function Page() {
   return (
     <>
       <section className="relative h-[80vh] bg-[url('/images/ATP-bg.png')] bg-cover bg-center flex items-center justify-center">
-        <div className="absolute inset-0 bg-white/15 mix-blend-lighten"></div>
-
+        <div className="absolute inset-0 bg-white/5 mix-blend-lighten"></div>
         <div className="relative z-10 text-center text-white px-4">
           <h1 className="text-5xl font-bold tracking-wide drop-shadow-lg">
             All Time Performances
@@ -12,10 +14,11 @@ export default function Page() {
             Verified attempts. Rugged routes. Transparent scoring. A community
             built for performance.
           </p>
-
-          <button className="mt-8 px-6 py-3 bg-green-700 hover:bg-green-800 rounded-lg font-semibold shadow-lg transition">
-            Discover Routes
-          </button>
+          <Link href="/routes">
+            <Button variant="primary" className="mt-6">
+              Discover Routes
+            </Button>
+          </Link>
         </div>
       </section>
 
@@ -58,12 +61,10 @@ export default function Page() {
             />
             <div className="p-6">
               <h3 className="text-xl font-semibold">Alpine Ridge Trail</h3>
-              <p className="mt-2 text-gray-300">
+              <p className="my-2 text-gray-300">
                 A rugged climb with sweeping mountain views. Verified FKT route.
               </p>
-              <button className="mt-4 px-4 py-2 bg-red-700 hover:bg-red-600 rounded-md font-medium">
-                View Leaderboard
-              </button>
+              <Button variant="secondary">View Leaderboard</Button>
             </div>
           </div>
 
@@ -76,13 +77,11 @@ export default function Page() {
             />
             <div className="p-6">
               <h3 className="text-xl font-semibold">Forest Loop</h3>
-              <p className="mt-2 text-gray-300">
+              <p className="my-2 text-gray-300">
                 Fast, technical trail through dense forest. Popular among local
                 athletes.
               </p>
-              <button className="mt-4 px-4 py-2 bg-red-700 hover:bg-red-600 rounded-md font-medium">
-                View Leaderboard
-              </button>
+              <Button variant="secondary">View Leaderboard</Button>
             </div>
           </div>
 
@@ -95,13 +94,11 @@ export default function Page() {
             />
             <div className="p-6">
               <h3 className="text-xl font-semibold">Canyon Descent</h3>
-              <p className="mt-2 text-gray-300">
+              <p className="my-2 text-gray-300">
                 Steep descent with technical switchbacks. A true test of control
                 and speed.
               </p>
-              <button className="mt-4 px-4 py-2 bg-red-700 hover:bg-red-600 rounded-md font-medium">
-                View Leaderboard
-              </button>
+              <Button variant="secondary">View Leaderboard</Button>
             </div>
           </div>
         </div>

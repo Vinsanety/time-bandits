@@ -7,7 +7,7 @@ export default function NavHeader() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-green-900 text-white shadow-md">
+    <header className="fixed top-0 w-full z-50 bg-gray-100 text-gray-900 shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
         {/* Logo */}
         <div className="text-2xl font-bold tracking-tight">
@@ -59,7 +59,7 @@ export default function NavHeader() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <nav className="md:hidden bg-green-800 px-4 p-4 space-y-4">
+        <nav className="md:hidden bg-gray-200 px-4 p-4 space-y-4">
           <Link
             href="/"
             className="block hover:text-amber-400"
