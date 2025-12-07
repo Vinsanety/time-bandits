@@ -16,7 +16,8 @@ export const routesByCategory: ATPCategory[] = [
   {
     id: 1,
     icon: "🏔️",
-    title: "Long Trail Thru-Hike ATPs",
+    title: "Long Trail",
+    description: "Point to point thru-hikes",
     routes: [
       { name: "Appalachian Trail" },
       { name: "Continental Divide Trail" },
@@ -33,7 +34,8 @@ export const routesByCategory: ATPCategory[] = [
   {
     id: 2,
     icon: "🏃‍♂️",
-    title: "Ultra-Trail ATPs (non-thru-hike, 50–120 miles)",
+    title: "Ultra Trail",
+    description: "5-120 miles",
     routes: [
       { name: "Wonderland Trail — Rainier" },
       { name: "Rim to Rim to Rim — Grand Canyon" },
@@ -50,7 +52,8 @@ export const routesByCategory: ATPCategory[] = [
   {
     id: 3,
     icon: "🏃",
-    title: "Short-Trail Epic Route ATPs (20–50 miles)",
+    title: "Short Trail",
+    description: "20-50 miles",
     routes: [
       { name: "Boulder Skyline Traverse" },
       { name: "Teton Crest Trail" },
@@ -67,7 +70,8 @@ export const routesByCategory: ATPCategory[] = [
   {
     id: 4,
     icon: "🧗",
-    title: "Alpine Traverse / Scrambling ATPs",
+    title: "Alpine Traverse",
+    description: "Often requiring scrambling and climbing",
     routes: [
       { name: "Grand Traverse — the Tetons" },
       { name: "WURL — Wasatch" },
@@ -84,7 +88,8 @@ export const routesByCategory: ATPCategory[] = [
   {
     id: 5,
     icon: "🏔️",
-    title: "Mountain Range / Multi-Peak Traverses",
+    title: "Link-ups",
+    description: "Range and Peak Traverses",
     routes: [
       { name: "Presidential Traverse", notes: "winter + summer categories" },
       { name: "Desolation 7-Summits — CA" },
@@ -101,7 +106,8 @@ export const routesByCategory: ATPCategory[] = [
   {
     id: 6,
     icon: "⛰️",
-    title: "Classic Up-&-Down Single Peak ATPs",
+    title: "Classic Single Peak",
+    description: "Up and down, fast as you can",
     routes: [
       { name: "Grand Teton Up & Down" },
       { name: "Longs Peak Up & Down" },
@@ -118,7 +124,7 @@ export const routesByCategory: ATPCategory[] = [
   {
     id: 7,
     icon: "📍",
-    title: "Peak Lists ATPs",
+    title: "Peak Lists",
     routes: [
       { name: "Colorado 14ers — total time" },
       { name: "California 14ers — total time" },
@@ -135,7 +141,7 @@ export const routesByCategory: ATPCategory[] = [
   {
     id: 8,
     icon: "🧊",
-    title: "Winter/Ice Snow ATPs",
+    title: "Winter/Ice Snow",
     routes: [
       { name: "Winter Presidential Traverse" },
       { name: "Winter Grand Teton" },
@@ -152,9 +158,8 @@ export const routesByCategory: ATPCategory[] = [
   {
     id: 9,
     icon: "🥾",
-    title: "Unsupported / Pure Mode ATPs",
-    description:
-      "Same routes, but classified by strict style. Allows filtering by style purity.",
+    title: "Unsupported / Pure Mode",
+    description: "Same routes, but classified by strict style",
     routes: [
       { name: "Unsupported Grand Canyon R2R2R" },
       { name: "Unsupported JMT" },
@@ -171,7 +176,8 @@ export const routesByCategory: ATPCategory[] = [
   {
     id: 10,
     icon: "🏊🚴‍♂️",
-    title: "Multi-sport ATPs",
+    title: "Multi-sport",
+    description: "Becuase sometimes one isn't enough",
     routes: [
       { name: "Run + Bike Grand Teton from Jackson approach" },
       { name: "Run + Climb + Downclimb Half Dome" },
