@@ -1,7 +1,7 @@
 import { Button } from "@/components/Button";
 import Link from "next/link";
 
-export default function Page() {
+export default function HomePage() {
   return (
     <>
       <section className="relative h-[80vh] bg-[url('/images/ATP-bg.png')] bg-cover bg-center flex items-center justify-center">
