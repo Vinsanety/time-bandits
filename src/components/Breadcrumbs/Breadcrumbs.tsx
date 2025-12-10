@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, ChevronRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import styles from "./Breadcrumbs.module.css";
 import { deslugify } from "@/lib/utils";
 
@@ -11,18 +11,8 @@ export default function Breadcrumbs() {
   const segments = pathname.split("/").filter(Boolean);
 
   return (
-    <nav aria-label="Breadcrumb" className="my-8">
+    <nav aria-label="Breadcrumb" className="mt-8 mb-0">
       <ol className={styles.breadcrumbs}>
-        <li className={styles.breadcrumbItem}>
-          <Link href="/" className={styles.breadcrumbLink}>
-            <Home className={styles.breadcrumbIcon} />
-            <span>Home</span>
-          </Link>
-          {segments.length > 0 && (
-            <ChevronRight className={styles.breadcrumbSeparator} />
-          )}
-        </li>
-
         {segments.map((segment, idx) => {
           const href = "/" + segments.slice(0, idx + 1).join("/");
           const isLast = idx === segments.length - 1;

@@ -18,7 +18,7 @@ export default function RootLayout({
         <header>
           <HeaderNav />
         </header>
-        <main className="py-16">{children}</main>
+        <main className="mt-[74px]">{children}</main>
       </body>
     </html>
   );

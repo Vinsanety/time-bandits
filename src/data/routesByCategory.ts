@@ -1,21 +1,9 @@
-// Define the type for a single ATP route
-export interface ATP {
-  name: string;
-  notes?: string; // optional extra info (e.g., "single-push variant", "winter + summer categories")
-}
+import { RouteCategory } from "@/types/routes";
 
-export interface ATPCategory {
-  id: number;
-  icon: string;
-  title: string;
-  description?: string;
-  routes: ATP[];
-}
-
-export const routesByCategory: ATPCategory[] = [
+export const routesByCategory: RouteCategory[] = [
   {
     id: 1,
-    icon: "🏔️",
+    icon: "route",
     title: "Long Trail",
     description: "Point to point thru-hikes",
     routes: [
@@ -33,7 +21,7 @@ export const routesByCategory: ATPCategory[] = [
   },
   {
     id: 2,
-    icon: "🏃‍♂️",
+    icon: "activity",
     title: "Ultra Trail",
     description: "50-120 miles",
     routes: [
@@ -44,14 +32,13 @@ export const routesByCategory: ATPCategory[] = [
       { name: "Zion Traverse" },
       { name: "Sandia Peak to Santa Fe" },
       { name: "Telluride to Ouray" },
-      // { name: "Kalalau Trail (Na Pali Coast)" },
       { name: "Loowit Trail", notes: "Mount Saint Helens, WA" },
       { name: "Uinta Highline Trail" },
     ],
   },
   {
     id: 3,
-    icon: "🏃",
+    icon: "settings2",
     title: "Short Trail",
     description: "20-50 miles",
     routes: [
@@ -69,7 +56,7 @@ export const routesByCategory: ATPCategory[] = [
   },
   {
     id: 4,
-    icon: "🧗",
+    icon: "moveHorizontal",
     title: "Alpine Traverse",
     description: "Often requiring scrambling and climbing",
     routes: [
@@ -87,7 +74,7 @@ export const routesByCategory: ATPCategory[] = [
   },
   {
     id: 5,
-    icon: "🏔️",
+    icon: "layers",
     title: "Link-ups",
     description: "Range and Peak Traverses",
     routes: [
@@ -105,13 +92,13 @@ export const routesByCategory: ATPCategory[] = [
   },
   {
     id: 6,
-    icon: "⛰️",
+    icon: "mountainSnow",
     title: "Classic Single Peak",
     description: "Up and down, fast as you can",
     routes: [
       { name: "Grand Teton Up & Down" },
       { name: "Longs Peak Up & Down" },
-      { name: "Half Dome cables route" },
+      { name: "Half Dome cables" },
       { name: "Mt Whitney" },
       { name: "Mt Hood South Side" },
       { name: "Mt Shasta Avalanche Gulch" },
@@ -123,7 +110,7 @@ export const routesByCategory: ATPCategory[] = [
   },
   {
     id: 7,
-    icon: "📍",
+    icon: "listCheck",
     title: "Peak Lists",
     routes: [
       { name: "Colorado 14ers — total time" },
@@ -140,7 +127,7 @@ export const routesByCategory: ATPCategory[] = [
   },
   {
     id: 8,
-    icon: "🧊",
+    icon: "snowflake",
     title: "Winter/Ice Snow",
     routes: [
       { name: "Winter Presidential Traverse" },
@@ -157,7 +144,7 @@ export const routesByCategory: ATPCategory[] = [
   },
   {
     id: 9,
-    icon: "🥾",
+    icon: "userX",
     title: "Unsupported / Pure Mode",
     description: "Same routes, but classified by strict style",
     routes: [
@@ -175,9 +162,9 @@ export const routesByCategory: ATPCategory[] = [
   },
   {
     id: 10,
-    icon: "🏊🚴‍♂️",
+    icon: "multiSport",
     title: "Multi-sport",
-    description: "Becuase sometimes one isn't enough",
+    description: "Because sometimes one isn't enough",
     routes: [
       { name: "Run + Bike Grand Teton from Jackson" },
       { name: "Run + Climb + Downclimb Half Dome" },

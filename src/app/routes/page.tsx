@@ -3,18 +3,17 @@
 import Link from "next/link";
 import { routesByCategory } from "@/data/routesByCategory";
 import { slugify } from "@/lib/utils";
+import { iconMap } from "@/lib/iconMap";
 
 export default function RoutesPage() {
   return (
     <section className="px-4 sm:px-6 lg:px-8">
       {/* Page Heading */}
-      <h1 className="text-5xl font-extrabold mb-12 text-center bg-linear-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent tracking-tight animate-fade-in">
-        Routes by Category
-      </h1>
-
+      <h1 className="animate-fade-in text-center">Routes by Category</h1>
       {/* Intro tagline */}
       <p className="mt-6 text-xl max-w-2xl mx-auto text-center text-gray-600 relative animate-fade-in delay-100">
         Top 10 routes <em>All Time Performance</em> by category
+        {/* Underline */}
         <span className="block w-24 h-1 bg-linear-to-r from-blue-500 to-blue-300 mx-auto mt-3 rounded-full"></span>
       </p>
 
@@ -35,9 +34,7 @@ export default function RoutesPage() {
                            focus-visible:outline-none focus-visible:bg-blue-50 focus-visible:underline focus-visible:decoration-blue-400 focus-visible:decoration-2 focus-visible:animate-pulse
                            active:scale-[.98] active:shadow-sm"
               >
-                <span className="text-4xl font-extrabold bg-linear-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
-                  {category.icon}
-                </span>
+                <span>{iconMap[category.icon]}</span>
                 <h2 className="text-2xl font-bold bg-linear-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent tracking-tight group-hover:underline decoration-blue-400">
                   {category.title}
                 </h2>
