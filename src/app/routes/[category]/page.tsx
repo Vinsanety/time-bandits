@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { routesByCategory } from "@/data/routesByCategory";
 import { slugify } from "@/lib/utils";
+import { iconMap } from "@/lib/iconMap";
 
 export default async function CategoryPage({
   params,
@@ -17,11 +18,11 @@ export default async function CategoryPage({
     return <div className="text-center py-12">Category not found</div>;
 
   return (
-    <section className="px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto animate-fade-in">
+    <section className="px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
       {/* Category Hero */}
-      <header className="mb-10 text-center">
-        <h1 className="text-4xl font-extrabold bg-linear-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent tracking-tight">
-          {categoryData.icon} {categoryData.title}
+      <header className="animate-fade-in mb-10 text-center">
+        <h1 className="flex items-center justify-center gap-4">
+          {iconMap[categoryData.icon]} {categoryData.title}
         </h1>
         {categoryData.description && (
           <p className="mt-4 text-lg text-gray-600 max-w-xl mx-auto">
@@ -32,7 +33,7 @@ export default async function CategoryPage({
       </header>
 
       {/* Routes Grid */}
-      <ul className="grid gap-6 sm:grid-cols-2 mt-8">
+      <ul className="animate-fade-in delay-100 grid gap-6 sm:grid-cols-2 mt-8">
         {categoryData.routes.map((route, idx) => (
           <Link
             key={idx}
