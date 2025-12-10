@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { routesByCategory } from "@/data/routesByCategory";
 import { slugify } from "@/lib/utils";
 
@@ -20,33 +19,9 @@ export default async function RoutePage({
 
   return (
     <section className="px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
-      {/* Breadcrumbs */}
-      <nav className="text-sm text-gray-500 mt-8">
-        <ol className="flex items-center space-x-2">
-          <li>
-            <Link href="/routes" className="hover:text-blue-600">
-              Routes
-            </Link>
-          </li>
-          <li>/</li>
-          <li>
-            <Link
-              href={`/routes/${slugify(categoryData.title)}`}
-              className="hover:text-blue-600 capitalize"
-            >
-              {categoryData.title}
-            </Link>
-          </li>
-          <li>/</li>
-          <li className="capitalize text-gray-700 font-medium">
-            {routeData.name}
-          </li>
-        </ol>
-      </nav>
-
       {/* Route Hero */}
       <header className="mb-10 text-center">
-        <h1 className="text-4xl font-extrabold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent tracking-tight">
+        <h1 className="text-4xl font-extrabold bg-linear-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent tracking-tight">
           {routeData.name}
         </h1>
         {routeData.notes && (
@@ -54,7 +29,7 @@ export default async function RoutePage({
             {routeData.notes}
           </p>
         )}
-        <span className="block w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-300 mx-auto mt-4 rounded-full"></span>
+        <span className="block w-20 h-1 bg-linear-to-r from-blue-500 to-blue-300 mx-auto mt-4 rounded-full"></span>
       </header>
 
       {/* Meta Info */}

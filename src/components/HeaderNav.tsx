@@ -11,7 +11,7 @@ export default function HeaderNav() {
     <header className="fixed top-0 w-full z-50 bg-gray-100 text-gray-900 shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
         {/* Logo */}
-        <div className="text-2xl font-extrabold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent tracking-tight">
+        <div className="text-2xl font-extrabold bg-linear-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent tracking-tight">
           <Link href="/">All Time Performance</Link>
         </div>
 

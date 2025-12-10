@@ -1,0 +1,28 @@
+@reference "tailwindcss";
+
+.breadcrumbs {
+  @apply flex flex-wrap items-center justify-start gap-x-2 gap-y-4 text-sm text-gray-600;
+}
+
+.breadcrumbItem {
+  @apply flex items-center;
+}
+
+.breadcrumbIcon {
+  @apply w-4 h-4 text-gray-500 mr-1;
+}
+
+.breadcrumbLink {
+  @apply flex items-center whitespace-nowrap transition rounded;
+  @apply hover:text-blue-600;
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2;
+  @apply active:scale-[.96] active:text-blue-700;
+}
+
+.breadcrumbSeparator {
+  @apply w-4 h-4 ml-2 text-gray-400;
+}
+
+.breadcrumbActive {
+  @apply font-semibold text-gray-900 whitespace-nowrap;
+}
