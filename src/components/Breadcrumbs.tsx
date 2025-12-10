@@ -4,18 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Home, ChevronRight } from "lucide-react";
 import styles from "./Breadcrumbs.module.css";
-
-const labelMap: Record<string, string> = {
-  routes: "Routes by Category",
-};
-
-function formatSegment(segment: string) {
-  if (labelMap[segment]) return labelMap[segment];
-  return segment
-    .split("-")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ");
-}
+import { deslugify } from "@/lib/utils";
 
 export default function Breadcrumbs() {
   const pathname = usePathname();
@@ -42,11 +31,11 @@ export default function Breadcrumbs() {
             <li key={href} className={styles.breadcrumbItem}>
               {!isLast ? (
                 <Link href={href} className={styles.breadcrumbLink}>
-                  {formatSegment(segment)}
+                  {deslugify(segment)}
                 </Link>
               ) : (
                 <span className={styles.breadcrumbActive}>
-                  {formatSegment(segment)}
+                  {deslugify(segment)}
                 </span>
               )}
               {!isLast && (

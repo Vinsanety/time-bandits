@@ -13,3 +13,12 @@ export function slugify(str: string) {
     .replace(/[^a-z0-9]+/g, "-") // replace spaces/symbols with "-"
     .replace(/(^-|-$)+/g, ""); // trim leading/trailing "-"
 }
+
+// Convert slug back into human-friendly label
+export function deslugify(slug: string, labelMap: Record<string, string> = {}) {
+  if (labelMap[slug]) return labelMap[slug];
+  return slug
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+}
