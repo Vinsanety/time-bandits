@@ -1,3 +1,7 @@
 export default function Page() {
-  return <h1>Media</h1>;
+  return (
+    <section className="animate-fade-in-up">
+      <h1>Media</h1>
+    </section>
+  );
 }

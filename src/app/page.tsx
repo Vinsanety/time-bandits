@@ -4,9 +4,9 @@ import Link from "next/link";
 export default function HomePage() {
   return (
     <>
-      <section className="animate-fade-in relative h-[80vh] bg-[url('/images/ATP-bg.png')] bg-cover bg-center flex items-center justify-center">
+      <section className="relative h-[80vh] bg-[url('/images/ATP-bg.png')] bg-cover bg-center flex items-center justify-center">
         <div className="absolute inset-0 bg-white/5 mix-blend-lighten"></div>
-        <div className="relative z-10 text-center text-white px-4">
+        <div className="animate-fade-in-up relative z-10 text-center text-white px-4">
           <h1 className="home-hero-text">All Time Performance</h1>
           <p className="mt-6 text-xl max-w-2xl mx-auto drop-shadow-md">
             Verified attempts. Rugged routes. Transparent scoring. A community
@@ -21,7 +21,7 @@ export default function HomePage() {
       </section>
 
       {/* Core Pillars */}
-      <section className="animate-fade-in delay-100 max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+      <section className="animate-fade-in-up delay-100 max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
         <div className="p-6 bg-stone-100 rounded-lg shadow-md">
           <h3 className="text-xl font-bold mb-2">Verified Attempts</h3>
           <p>
@@ -45,7 +45,7 @@ export default function HomePage() {
       </section>
 
       {/* Featured Routes */}
-      <section className="animate-fade-in delay-300 max-w-6xl mx-auto px-6 py-16">
+      <section className="animate-fade-in-up delay-300 max-w-6xl mx-auto px-6 py-16">
         <h2 className="text-3xl font-bold text-green-900 mb-8">
           Featured Routes
         </h2>

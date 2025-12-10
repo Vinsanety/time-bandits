@@ -8,8 +8,8 @@ export default function HeaderNav() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-gray-100 text-gray-900 shadow-md">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
+    <header className="fixed top-0 w-full h-18 z-50 bg-gray-100 text-gray-900 shadow-md">
+      <div className="max-w-7xl mx-auto p-4 sm:px-6 lg:px-8 flex justify-between items-center">
         {/* Logo */}
         <div className="text-2xl font-extrabold bg-linear-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent tracking-tight">
           <Link href="/">All Time Performance</Link>

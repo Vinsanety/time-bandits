@@ -20,7 +20,7 @@ export default async function RoutePage({
   }
 
   return (
-    <section className="animate-fade-in px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
+    <section className="animate-fade-in-up px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
       {/* Route Hero */}
       <header className="mb-10 text-center">
         <h1>{routeData.name}</h1>
@@ -41,7 +41,7 @@ export default async function RoutePage({
       </header>
 
       {/* Placeholder for route details */}
-      <article className="animate-fade-in delay-100 prose prose-blue mx-auto">
+      <article className="animate-fade-in-up delay-100 prose prose-blue mx-auto">
         <p>
           Add more detailed information about the route — stats, maps,
           difficulty levels, or performance notes.

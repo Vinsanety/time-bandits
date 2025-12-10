@@ -18,7 +18,7 @@ export default function RootLayout({
         <header>
           <HeaderNav />
         </header>
-        <main className="mt-[74px]">{children}</main>
+        <main className="pt-18">{children}</main>
       </body>
     </html>
   );

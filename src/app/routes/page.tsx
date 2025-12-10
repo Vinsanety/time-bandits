@@ -9,9 +9,9 @@ export default function RoutesPage() {
   return (
     <section className="px-4 sm:px-6 lg:px-8">
       {/* Page Heading */}
-      <h1 className="animate-fade-in text-center">Routes by Category</h1>
+      <h1 className="animate-fade-in-up text-center">Routes by Category</h1>
       {/* Intro tagline */}
-      <p className="mt-6 text-xl max-w-2xl mx-auto text-center text-gray-600 relative animate-fade-in delay-100">
+      <p className="mt-6 text-xl max-w-2xl mx-auto text-center text-gray-600 relative animate-fade-in-up delay-100">
         Top 10 routes <em>All Time Performance</em> by category
         {/* Underline */}
         <span className="block w-24 h-1 bg-linear-to-r from-blue-500 to-blue-300 mx-auto mt-3 rounded-full"></span>
@@ -22,7 +22,7 @@ export default function RoutesPage() {
         {routesByCategory.map((category, idx) => (
           <div
             key={category.id}
-            className="animate-fade-in"
+            className="animate-fade-in-up"
             style={{ animationDelay: `${idx * 100}ms` }}
           >
             {/* Card */}
