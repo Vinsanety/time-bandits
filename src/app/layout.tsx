@@ -15,9 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <header>
-          <HeaderNav />
-        </header>
+        <HeaderNav />
         <main className="pt-18">{children}</main>
       </body>
     </html>
