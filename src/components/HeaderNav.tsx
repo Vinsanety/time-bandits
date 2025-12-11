@@ -29,7 +29,7 @@ export default function HeaderNav() {
         <div className="text-2xl font-extrabold bg-linear-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent tracking-tight">
           <Link
             href="/"
-            className="border-b-blue-600 focus-visible:border-b-2 focus-visible:outline-none"
+            className="py-2 border-b-blue-600 focus-visible:border-b-2 focus-visible:outline-none"
           >
             All Time Performance
           </Link>
