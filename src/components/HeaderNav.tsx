@@ -2,11 +2,14 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { NavLink } from "@/components/NavLink";
 
 export default function HeaderNav() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
+  const homeRoute = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 10 || isOpen);
@@ -17,8 +20,8 @@ export default function HeaderNav() {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-100 ${
-        isScrolled ? "h-16 bg-gray-100 shadow-md" : "h-18 bg-transparent"
+      className={`fixed h-18 top-0 w-full z-50 transition-all duration-100 ${
+        isScrolled || homeRoute ? "bg-gray-100 shadow-md" : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-full">
