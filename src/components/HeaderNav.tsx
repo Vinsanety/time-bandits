@@ -1,18 +1,38 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { NavLink } from "@/components/NavLink";
 
 export default function HeaderNav() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
+  const homeRoute = pathname === "/";
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 10 || isOpen);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isOpen]);
 
   return (
-    <header className="fixed top-0 w-full h-18 z-50 bg-gray-100 text-gray-900 shadow-md">
-      <div className="max-w-7xl mx-auto p-4 sm:px-6 lg:px-8 flex justify-between items-center">
+    <header
+      className={`fixed h-18 top-0 w-full z-50 transition-all duration-100 ${
+        isScrolled || homeRoute ? "bg-gray-100 shadow-md" : "bg-transparent"
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-full">
         {/* Logo */}
         <div className="text-2xl font-extrabold bg-linear-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent tracking-tight">
-          <Link href="/">All Time Performance</Link>
+          <Link
+            href="/"
+            className="border-b-blue-600 focus-visible:border-b-2 focus-visible:outline-none"
+          >
+            All Time Performance
+          </Link>
         </div>
 
         {/* Desktop Nav */}
@@ -25,7 +45,9 @@ export default function HeaderNav() {
         {/* Mobile Hamburger */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden focus:outline-none"
+          className="md:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md p-2"
+          aria-label="Toggle navigation"
+          aria-expanded={isOpen}
         >
           <svg
             className="w-6 h-6"
@@ -53,8 +75,14 @@ export default function HeaderNav() {
       </div>
 
       {/* Mobile Menu */}
-      {isOpen && (
-        <nav className="md:hidden bg-gray-200 px-4 p-4 space-y-4">
+      <nav
+        className={`md:hidden transition-all duration-300 ${
+          isOpen
+            ? "max-h-screen opacity-100 bg-gray-50 border-t border-gray-200 shadow-md"
+            : "max-h-0 opacity-0 overflow-hidden"
+        }`}
+      >
+        <div className="px-4 py-6 space-y-4">
           <NavLink href="/" onClick={() => setIsOpen(false)}>
             Home
           </NavLink>
@@ -64,8 +92,8 @@ export default function HeaderNav() {
           <NavLink href="/media" onClick={() => setIsOpen(false)}>
             Media
           </NavLink>
-        </nav>
-      )}
+        </div>
+      </nav>
     </header>
   );
 }
