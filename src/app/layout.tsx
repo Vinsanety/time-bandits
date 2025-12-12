@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import HeaderNav from "@/components/HeaderNav";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Time Bandits",
@@ -14,9 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className="flex flex-col min-h-screen">
         <HeaderNav />
-        <main className="pt-18">{children}</main>
+        <main className="grow pt-18">{children}</main>
+        <Footer />
       </body>
     </html>
   );
