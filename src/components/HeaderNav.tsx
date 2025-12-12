@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NavLink } from "@/components/NavLink";
+import { TimerReset, Medal } from "lucide-react";
 
 export default function HeaderNav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,12 +27,14 @@ export default function HeaderNav() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-full">
         {/* Logo */}
-        <div className="text-2xl font-extrabold bg-linear-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent tracking-tight">
+        <div className="text-2xl font-extrabold tracking-tight">
           <Link
             href="/"
-            className="py-2 border-b-blue-600 focus-visible:border-b-2 focus-visible:outline-none"
+            className="flex gap-2 items-center justify-center group relative py-2 text-blue-600 transition-all duration-400 focus-visible:outline-none focus-visible:bg-blue-100"
           >
+            <Medal className="h-6 w-6 text-blue-600" />
             All Time Performance
+            <span className=" absolute left-0 bottom-0 h-0.5 w-full bg-blue-600 transform origin-left transition-transform duration-400 ease-out scale-x-0 group-hover:scale-x-100 group-focus-visible:scale-x-100"></span>
           </Link>
         </div>
 
