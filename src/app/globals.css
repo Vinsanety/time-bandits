@@ -1,15 +1,16 @@
 @import "tailwindcss";
 
-/* Tailwind Layers
+/* Tailwind Base Layer
 ====================================== */
-/* === Tailwind Base Layer === */
 @layer base {
+  /* === HTML === */
   body {
     background: var(--background);
     color: var(--foreground);
     font-family: Arial, Helvetica, sans-serif;
   }
 
+  /* === Typography === */
   h1 {
     @apply mt-6 mb-8 text-3xl leading-normal font-extrabold;
     @apply bg-linear-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent tracking-tight;
@@ -26,8 +27,10 @@
   }
 }
 
-/* === Tailwind Components Layer === */
+/* Tailwind Components Layer
+====================================== */
 @layer components {
+  /* === Card List Item === */
   .card-list-item_link {
     @apply flex gap-4 bg-gray-50 rounded-lg p-4 shadow-sm
          transition-all duration-200
@@ -37,16 +40,10 @@
   }
 }
 
-/* === Tailwind Utilities Layer === */
+/* Tailwind Utilities Layer
+====================================== */
 @layer utilities {
-  .animate-fade-in-up {
-    @apply opacity-0;
-    animation: fadeInUp 0.6s ease forwards;
-  }
-  .delay-100 {
-    animation-delay: 0.1s;
-  }
-
+  /* === Animations === */
   @keyframes fadeInUp {
     from {
       opacity: 0;
@@ -56,5 +53,12 @@
       opacity: 1;
       transform: translateY(0);
     }
+  }
+  .animate-fade-in-up {
+    @apply opacity-0;
+    animation: fadeInUp 0.6s ease forwards;
+  }
+  .delay-100 {
+    animation-delay: 0.1s;
   }
 }

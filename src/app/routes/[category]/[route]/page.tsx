@@ -29,18 +29,20 @@ export default async function RoutePage({
       {/* Route Hero */}
       <div className="animate-fade-in-up delay-100 mb-10 text-center">
         <h1>{routeData.name}</h1>
-        {routeData.notes && (
-          <p className="flex items-center justify-center gap-2">
-            <MapPin />
-            {routeData.notes}
-          </p>
-        )}
-        <div className="flex items-center justify-center gap-6 mb-8">
-          <p className="flex gap-2">
+        <div className="flex items-center justify-center flex-col gap-6">
+          <h6 className="flex items-center gap-2">
             {iconMap[categoryData.icon]}
             {categoryData.title}
-          </p>
+          </h6>
+
+          {routeData.notes && (
+            <span className="flex items-center gap-2">
+              <MapPin />
+              {routeData.notes}
+            </span>
+          )}
         </div>
+
         {/* Underline */}
         <span className="block w-20 h-1 bg-linear-to-r from-blue-500 to-blue-300 mx-auto mt-4 rounded-full"></span>
       </div>
