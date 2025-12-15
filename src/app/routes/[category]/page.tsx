@@ -40,9 +40,9 @@ export default async function CategoryPage({
             href={`/routes/${slugify(categoryData.title)}/${slugify(
               route.name
             )}`}
-            className="font-semibold text-gray-800 hover:text-blue-700 transition-colors"
+            className="card-list-item_link"
           >
-            <li className="flex gap-4 bg-gray-50 rounded-lg p-4 shadow-sm hover:shadow-md hover:bg-blue-50 transition-all">
+            <li className="flex gap-4">
               {/* Number badge */}
               <span className="shrink-0 w-6 h-6 flex items-center justify-center rounded-full bg-gray-200 text-gray-600 text-sm font-medium">
                 {idx + 1}

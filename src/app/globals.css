@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
-/* Base styles */
+/* Tailwind Layers
+====================================== */
+/* === Tailwind Base Layer === */
 @layer base {
   body {
     background: var(--background);
@@ -24,7 +26,18 @@
   }
 }
 
-/* Utilities */
+/* === Tailwind Components Layer === */
+@layer components {
+  .card-list-item_link {
+    @apply flex gap-4 bg-gray-50 rounded-lg p-4 shadow-sm
+         transition-all duration-200
+         hover:shadow-md hover:bg-blue-50 hover:-translate-y-0.5
+         focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2
+         active:scale-[.98] active:shadow-sm;
+  }
+}
+
+/* === Tailwind Utilities Layer === */
 @layer utilities {
   .animate-fade-in-up {
     @apply opacity-0;
@@ -33,15 +46,15 @@
   .delay-100 {
     animation-delay: 0.1s;
   }
-}
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }

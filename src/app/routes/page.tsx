@@ -13,7 +13,6 @@ export default function RoutesPage() {
       {/* Intro tagline */}
       <p className="mt-6 text-xl max-w-2xl mx-auto text-center text-gray-600 relative animate-fade-in-up delay-100">
         Top 10 routes <em>All Time Performance</em> by category
-        {/* Underline */}
         <span className="block w-24 h-1 bg-linear-to-r from-blue-500 to-blue-300 mx-auto mt-3 rounded-full"></span>
       </p>
 
@@ -58,10 +57,7 @@ export default function RoutesPage() {
                       href={`/routes/${slugify(category.title)}/${slugify(
                         route.name
                       )}`}
-                      className="flex gap-4 bg-gray-50 rounded-lg p-4 shadow-sm transition-all duration-200
-                                 hover:shadow-md hover:bg-blue-50 hover:-translate-y-0.5
-                                 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2
-                                 active:scale-[.98] active:shadow-sm"
+                      className="card-list-item_link"
                     >
                       {/* Number badge */}
                       <span className="shrink-0 w-6 h-6 flex items-center justify-center rounded-full bg-gray-200 text-gray-600 text-sm font-medium">
@@ -70,7 +66,7 @@ export default function RoutesPage() {
 
                       {/* Route content */}
                       <div className="flex flex-col">
-                        <span className="font-semibold text-gray-800 transition-colors">
+                        <span className="font-semibold text-gray-800">
                           {route.name}
                         </span>
                         {route.notes && (
