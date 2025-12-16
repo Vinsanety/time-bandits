@@ -2,6 +2,7 @@ import Link from "next/link";
 import { routesByCategory } from "@/data/routesByCategory";
 import { slugify } from "@/lib/utils";
 import { iconMap } from "@/lib/iconMap";
+import { CircleOff } from "lucide-react";
 
 export default async function CategoryPage({
   params,
@@ -15,10 +16,15 @@ export default async function CategoryPage({
   );
 
   if (!categoryData)
-    return <div className="text-center py-12">Category not found</div>;
+    return (
+      <p className="flex items-center justify-center gap-2 py-12">
+        <CircleOff />
+        Category not found
+      </p>
+    );
 
   return (
-    <section className="px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
+    <div className="max-w-3xl mx-auto">
       {/* Category Hero */}
       <header className="animate-fade-in-up mb-10 text-center">
         <h1 className="flex items-center justify-center gap-4">
@@ -59,6 +65,6 @@ export default async function CategoryPage({
           </Link>
         ))}
       </ul>
-    </section>
+    </div>
   );
 }

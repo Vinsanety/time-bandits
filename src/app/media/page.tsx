@@ -1,7 +1,9 @@
 export default function Page() {
   return (
-    <section className="animate-fade-in-up">
-      <h1>Media</h1>
+    <section className="container mx-auto px-8">
+      <h1 className="animate-fade-in-up flex items-center justify-center">
+        Media
+      </h1>
     </section>
   );
 }
