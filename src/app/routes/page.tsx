@@ -7,17 +7,17 @@ import { iconMap } from "@/lib/iconMap";
 
 export default function RoutesPage() {
   return (
-    <section className="px-4 sm:px-6 lg:px-8">
+    <div className="max-w-6xl mx-auto">
       {/* Page Heading */}
       <h1 className="animate-fade-in-up text-center">Routes by Category</h1>
       {/* Intro tagline */}
       <p className="mt-6 text-xl max-w-2xl mx-auto text-center text-gray-600 relative animate-fade-in-up delay-100">
-        Top 10 routes <em>All Time Performance</em> by category
+        <em>All Time Performance</em> by category
         <span className="block w-24 h-1 bg-linear-to-r from-blue-500 to-blue-300 mx-auto mt-3 rounded-full"></span>
       </p>
 
       {/* Category Grid */}
-      <div className="grid gap-10 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-12">
+      <div className="grid gap-10 grid-cols-1 md:grid-cols-2 mt-12">
         {routesByCategory.map((category, idx) => (
           <div
             key={category.id}
@@ -83,6 +83,6 @@ export default function RoutesPage() {
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 }
