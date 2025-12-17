@@ -9,7 +9,7 @@ import { routesByCategory } from "@/data/routesByCategory";
 import { slugify } from "@/lib/utils";
 import { iconMap } from "@/lib/iconMap";
 
-export default function HeaderNav() {
+export default function NavHeader() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -80,7 +80,7 @@ export default function HeaderNav() {
 
             {/* Desktop Dropdown Items */}
             <div
-              className={`absolute left-0 w-56 rounded-md bg-white shadow-lg border border-gray-200 
+              className={`absolute flex left-0 min-w-44 rounded-md  bg-white shadow-lg border border-gray-200 
                 transition-opacity duration-200
                 ${
                   isDropdownOpen
@@ -88,11 +88,11 @@ export default function HeaderNav() {
                     : "opacity-0 pointer-events-none"
                 }`}
             >
-              <ul className="py-2">
+              <ul className="flex flex-col gap-2 w-full py-2">
                 <li>
                   <NavLink
                     href="/routes"
-                    className="flex items-center gap-2 font-semibold"
+                    className="flex items-center gap-2 text-md w-full border-b border-gray-200"
                   >
                     <FolderOpen /> All Categories
                   </NavLink>
@@ -102,9 +102,11 @@ export default function HeaderNav() {
                   <li key={category.id}>
                     <NavLink
                       href={`/routes/${slugify(category.title)}`}
-                      className="flex items-center gap-2"
+                      className="flex items-center gap-2 text-sm"
                     >
-                      {iconMap[category.icon]}
+                      <span className="flex items-center justify-center w-4 h-4 *:text-gray-800">
+                        {iconMap[category.icon]}
+                      </span>
                       {category.title}
                     </NavLink>
                   </li>
@@ -175,7 +177,7 @@ export default function HeaderNav() {
               <NavLink
                 href="/routes"
                 onClick={() => setIsOpen(false)}
-                className="flex items-center gap-2 font-semibold"
+                className="flex items-center gap-2 text-md w-full border-b border-gray-200"
               >
                 <FolderOpen />
                 All Categories
@@ -186,9 +188,11 @@ export default function HeaderNav() {
                   key={category.id}
                   href={`/routes/${slugify(category.title)}`}
                   onClick={() => setIsOpen(false)}
-                  className="flex items-center gap-2"
+                  className="flex items-center gap-2 text-sm"
                 >
-                  {iconMap[category.icon]}
+                  <span className="flex items-center justify-center w-4 h-4 *:text-gray-800">
+                    {iconMap[category.icon]}
+                  </span>
                   {category.title}
                 </NavLink>
               ))}
