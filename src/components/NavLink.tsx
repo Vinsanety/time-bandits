@@ -23,12 +23,20 @@ export function NavLink({
   const base =
     "group relative block w-fit px-3 py-2 text-md transition-all duration-200 hover:text-blue-600 focus-visible:outline-none focus-visible:bg-blue-100 focus-visible:border-blue-600";
 
-  const styles = cn(base, className);
+  const styles = cn(
+    base,
+    isActive || variant === "active" ? "text-blue-600" : "",
+    className
+  );
 
   return (
-    <Link href={href} className={styles} {...props}>
+    <Link
+      href={href}
+      aria-current={isActive ? "page" : undefined}
+      className={styles}
+      {...props}
+    >
       {children}
-      {/* underline element */}
       <span
         className={cn(
           "absolute left-0 bottom-0 h-0.5 w-full bg-blue-600 transform origin-left transition-transform duration-300 ease-out",

@@ -31,7 +31,7 @@ export const routesByCategory: RouteCategory[] = [
       { name: "Arizona Trail" },
       { name: "Tahoe Rim Trail" },
       { name: "Colorado Trail" },
-      { name: "Long Trail (Vermont)" },
+      { name: "Vermont Long Trail" },
       { name: "John Muir Trail" },
       { name: "Ouachita Trail" },
       { name: "Florida Trail" },
