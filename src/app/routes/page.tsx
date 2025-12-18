@@ -13,7 +13,7 @@ export default function RoutesPage() {
       {/* Intro tagline */}
       <p className="mt-6 text-xl max-w-2xl mx-auto text-center text-gray-600 relative animate-fade-in-up delay-100">
         <em>All Time Performance</em> by category
-        <span className="block w-24 h-1 bg-linear-to-r from-blue-500 to-blue-300 mx-auto mt-3 rounded-full"></span>
+        <span className="underline"></span>
       </p>
 
       {/* Category Grid */}

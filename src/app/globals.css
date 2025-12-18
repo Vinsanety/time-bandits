@@ -38,6 +38,11 @@
          focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2
          active:scale-[.98] active:shadow-sm;
   }
+
+  /* === Underline Divider Class === */
+  .underline {
+    @apply block w-24 h-1 bg-linear-to-r from-blue-500 to-blue-300 mx-auto mt-4 rounded-full;
+  }
 }
 
 /* Tailwind Utilities Layer

@@ -44,7 +44,7 @@ export default async function RoutePage({
         </div>
 
         {/* Underline */}
-        <span className="block w-20 h-1 bg-linear-to-r from-blue-500 to-blue-300 mx-auto mt-4 rounded-full"></span>
+        <span className="underline"></span>
       </div>
 
       {/* Placeholder for route details */}
