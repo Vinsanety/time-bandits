@@ -1,5 +1,5 @@
-import { Button } from "@/components/Button";
-import Link from "next/link";
+"use client";
+import { LinkButton } from "@/components/LinkButton";
 
 export default function HomePage() {
   return (
@@ -12,11 +12,9 @@ export default function HomePage() {
             Verified attempts. Rugged routes. Transparent scoring. A community
             built for performance.
           </p>
-          <Link href="/routes">
-            <Button variant="primary" className="mt-6">
-              Discover Routes
-            </Button>
-          </Link>
+          <LinkButton href="/routes" className="btn-primary mt-6">
+            Discover Routes
+          </LinkButton>
         </div>
       </section>
 
@@ -60,7 +58,14 @@ export default function HomePage() {
               <p className="text-gray-300">
                 A rugged climb with sweeping mountain views. Verified FKT route.
               </p>
-              <Button variant="secondary">View Leaderboard</Button>
+              <LinkButton
+                href="/"
+                variant="secondary"
+                size="sm"
+                onClick={() => alert("🚧 Route under construction 🚧")}
+              >
+                View Leaderboard
+              </LinkButton>
             </div>
           </div>
 
@@ -77,7 +82,14 @@ export default function HomePage() {
                 Fast, technical trail through dense forest. Popular among local
                 athletes.
               </p>
-              <Button variant="secondary">View Leaderboard</Button>
+              <LinkButton
+                href="/"
+                variant="secondary"
+                size="sm"
+                onClick={() => alert("🚧 Route under construction 🚧")}
+              >
+                View Leaderboard
+              </LinkButton>
             </div>
           </div>
 
@@ -94,7 +106,14 @@ export default function HomePage() {
                 Steep descent with technical switchbacks. A true test of control
                 and speed.
               </p>
-              <Button variant="secondary">View Leaderboard</Button>
+              <LinkButton
+                href=""
+                variant="secondary"
+                size="sm"
+                onClick={() => alert("🚧 Route under construction 🚧")}
+              >
+                View Leaderboard
+              </LinkButton>
             </div>
           </div>
         </div>

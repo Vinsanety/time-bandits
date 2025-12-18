@@ -35,7 +35,7 @@ export default async function CategoryPage({
             {categoryData.description}
           </p>
         )}
-        <span className="block w-20 h-1 bg-linear-to-r from-blue-500 to-blue-300 mx-auto mt-4 rounded-full"></span>
+        <span className="block w-24 h-1 bg-linear-to-r from-blue-500 to-blue-300 mx-auto mt-4 rounded-full"></span>
       </header>
 
       {/* Routes Grid */}
